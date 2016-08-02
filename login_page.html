@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TeaShop loginpage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/styles/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="">
+<!-- style="width: 25%;" -->
+  <div class="row">
+
+    <!-- <div class="col-lg-4 col-md-3 col-sm-2 col-xs-1" style=""></div> -->
+    <!-- <div class="col-lg-4 col-md-6 col-sm-8 col-xs-10" style=""> -->
+
+      <div class="center-box"><h1>EASY ORDER</h1>
+          <div class="avatar-box">
+            <a href="index.html">
+              <div class="avatar"><img src="app/styles/images/avatar.png" ></div>
+            </a>
+          </div>
+
+          <div class="form-container">
+
+              <h3>Log in</h3>
+
+              <form class="form" role="form">
+
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" class="form-control" id="email" required="required">
+                </div>
+                <div class="form-group">
+                   <label for="pwd">Password</label>
+                   <input type="password" class="form-control" id="pwd" required="required">
+                </div>
+                <div class="form-help">
+
+                    <div class="checkbox col-sx-12 col-sm-6 col-md-6 col-lg-6">
+                        <label><input type="checkbox"> Remember me</label>
+                        <!-- <%= f.label :remember_me, class: "checkbox inline" do %>
+                        <%= f.check_box :remember_me %>
+                            <span>Remember me</span> -->
+                    </div>
+                    <div class="remaindpass col-sx-12 col-sm-6 col-md-6 col-lg-6">
+                    <a href="forgetpass.html">Forget your password?</a>
+                    <!-- <%= link_to "Forget your password?", '#' %> -->
+                    </div>
+
+                </div>
+                    
+                <div class="form-help2">
+                    <button type="submit" class="btn" style=""> LOG IN </button>
+                </div>
+
+              </form>
+                <div class="form-bottom">
+                    <a href="signup_page.html">I don't have an account</a>
+                    <!-- <%= link_to "I don't have an account!", sign_up_path %> -->
+                </div>      
+
+          </div>                                                          
+          <!--  /form-container -->
+
+      </div>                                                              
+      
+    <!-- </div>                                                                 -->
+     
+
+    <!-- <div class="col-lg-4 col-md-3 col-sm-2 col-xs-1" style=""></div> -->
+
+  </div>
+
+</div>
+
+</body>
+</html>

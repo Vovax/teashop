@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TeaShop sign up page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/styles/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- <script id="signup-form" type='text/template'> -->
+  <div class="container" >
+
+    <!-- <div class="row"> -->
+
+      <!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1" style=""></div> -->
+      <!-- <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10" style=""> -->
+
+        <div class="center-box"><h1> EASY ORDER </h1>    
+          <a href="index.html">     
+            <div class="avatar-box">
+
+              <div class="avatar"><img src="app/styles/images/avatar.png" ></div>
+
+            </div>
+          </a>
+            <div class="form-container" style="width:;">
+              <!-- <%= form_for(@user) do |f| %> -->
+                <h3> Sign up </h3>
+                
+                  <form role="form">
+                    
+                    <div class="form-container-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                      <div class="form-group">
+                        <label for="name">Name or company name</label>
+                        <!-- <%= f.text_field :name, class: 'form-control', required: true %> -->
+                        <input type="text" class="form-control" id="name" required="required" size="50">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="zip_code">ZIP Code</label>
+                        <!-- <%= f.text_field :zip_code, class: 'form-control'%> -->
+                        <input type="text" class="form-control" id="zip_code">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city">
+                        <!-- <%= f.label :city %>
+                        <%= f.text_field :city, class: 'form-control' %> -->
+                      </div>
+                    </div>
+
+                    <div class="form-container-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <!-- <%= f.label :address %> -->
+                        <!-- <%= f.text_field :address, class: 'form-control' %> -->
+                        <input type="text" class="form-control" id="address">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <!-- <%= f.email_field :email, class: 'form-control', required: true, size: 12 %> -->
+                        <input type="email" class="form-control" id="email" required="required">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <!-- <%= f.label :password %>
+                        <%= f.password_field :password, class: 'form-control', required: true %> -->
+                        <input type="password" class="form-control" id="password" required="required">
+                      </div> 
+                    </div>
+
+                    <div class="form-help3">  
+                      <button type="submit" class="btn" style=""> SIGN UP </button>            
+                        
+                          
+                        
+                    </div>
+
+                  </form>
+                <div class="form-bottom">
+                  <a href="login_page.html">I already have an account</a>
+                  <!-- <%= link_to "I already have an account", log_in_path %> -->
+                </div>
+
+              <!-- <% end %>                          -->
+            </div>                                                          
+            <!--  /form-container -->
+
+        </div>                                                              
+        <!-- /center-box -->
+      <!-- </div>                                                                 -->
+      <!-- /col- ... --> 
+
+      <!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1" style=""></div> -->
+
+    <!-- </div> -->
+
+  </div>
+<!-- </script> -->
+</body>
+</html>
+

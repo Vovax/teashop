@@ -1,17 +1,15 @@
 'use strict';
 
-var App = {
+var Router = require('./router');
 
-	init: function() {
-		console.log('hello');
-		debugger;
-		$(document).find('.app-container').css('background-color', 'red');
-		$('.app-container').hide();
-		setTimeout(function() {
-			$('.app-container').show();
-		}, 10000)
-	}
 
-};
+var App = new Mn.Application();
+
+
+App.on('start', function() {
+	App.router = new Router();
+    Backbone.history.start();
+});
 
 module.exports = App;
+

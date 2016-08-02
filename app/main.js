@@ -1,11 +1,11 @@
 'use strict';
 
-require('backbone');
+require('./styles/styles.css');
+// require('./styles/main.scss');
 
 var app = require('./scripts/app');
 
 var a = 3;
 console.log(a);
-debugger;
 
-app.init();
+app.start();

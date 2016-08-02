@@ -5,13 +5,15 @@ var path = require('path'),
 	ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: [
-		'webpack-dev-server/client?http://localhost:8080',
-		'./app/main.js'
-	],
+	entry: './app/main.js',
+	output: {
+		path: './app/build/', 
+		filename: 'bundle.js',
+		publicPath: '/public/'
+	},
 	output: {
 		path: './build/',
-		filename: '[name].js'
+		filename: 'bundle.js'
 	},
 	devtool: 'source-map',
 	watch: true,
