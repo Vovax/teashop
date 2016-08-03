@@ -2,7 +2,7 @@
 
 var App = require('../../app'),
     AppLayoutView = require('../AppLayoutView'),
-    AuthView = require('./views/AuthView'),
+    AuthView = require('./views/authView'),
     HomeLayoutView = require('./views/HomeLayoutView');
 
 module.exports = {
