@@ -14,9 +14,8 @@ var AuthView = Mn.ItemView.extend({
 	},
 
 	events: {
-		// 'click @ui.button': 'callSomeMethod',
-		'click @ui.login': 'login',
-		'click @ui.signup': 'signup'
+		'click @ui.login': 'openLoginView',
+		'click @ui.signup': 'openSignupView'
 	},
 
 	initialize: function() {

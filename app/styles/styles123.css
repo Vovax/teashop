@@ -200,7 +200,7 @@ a, a:active, a:visited {
 
 
 
-.form-container {
+/*.form-container {
 	
 	width: 100%;	
 	height:;
@@ -214,9 +214,9 @@ a, a:active, a:visited {
 	color: #A9A9A9;
 	text-align: left;
 	font-size: 11px;
-	font-weight: normal;
+	font-weight: normal;*/
 	/*letter-spacing: normal;*/
-}
+/*}*/
 
 .form {
 	padding: 0px 15px 0px 15px;

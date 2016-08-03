@@ -1,6 +1,12 @@
 
 body {
-    
+    height: 100%;
+  	/*width: 100%;*/
+  	background: #FFFFFF url("images/background.png") no-repeat center top; 
+	background-size: 100%;
+	height: 100%;
+ 	max-width: 100%;
+ 	overflow-x: hidden;
 }
 
 h1 {
@@ -38,12 +44,32 @@ h4 {
 	padding-left: 0px;
 	padding-right: 0px;
 
+
  }
 
 .container-teashop {
-	background: #FFFFFF url("./images/background.png") no-repeat center top;
-	background-size: 100%;
+/*	width: 100%;	
+	height: 100%;*/
 	
+}
+
+
+.form-container {
+	
+	width: 50%;	
+	/*height: 100%;*/
+	background: #FFFFFF;
+	border: 0px solid #cccccc;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 65px;
+	margin-left: 25%;
+	padding: 20px 15px 15px 15px;
+	color: #646B63;
+	text-align: left;
+	font-size: 11px;
+	font-weight: normal;
+	letter-spacing: normal;
 }
 
 
@@ -100,23 +126,6 @@ a, a:active, a:visited {
 	
 }
 
-.form-container {
-	
-	width: 100%;	
-	height:;
-	background: #FFFFFF;
-	border: 0px solid #cccccc;
-	border-radius: 3px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-top: 65px;
-	padding: 20px 15px 15px 15px;
-	color: #646B63;
-	text-align: left;
-	font-size: 11px;
-	font-weight: normal;
-	letter-spacing: normal;
-}
-
 
 /* ---------- avatar ---------- */
 
@@ -125,20 +134,20 @@ a, a:active, a:visited {
 	width: 66px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
+	margin-top: 12px;
 }
 
 .avatar {
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	z-index:;
     text-align: center;
     background: #FFFFFF;
-    width: 66px;
-    height: 66px;
+    width: 60px;
+    height: 60px;
     border-radius: 33px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 12px;
+    padding: 5px;
 
 }
 
