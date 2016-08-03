@@ -26,6 +26,9 @@ var AuthView = Mn.ItemView.extend({
 		this.ui.login.css('color', 'red');
 	},
 
+	serializeData: function() {
+	},
+
 	callSomeMethod: function() {
 		console.log('clicked');
 	}

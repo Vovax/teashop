@@ -41,7 +41,7 @@ h4 {
  }
 
 .container-teashop {
-	background: #FFFFFF url("background.png") no-repeat center top;
+	background: #FFFFFF url("./images/background.png") no-repeat center top;
 	background-size: 100%;
 	
 }
@@ -219,7 +219,7 @@ a, a:active, a:visited {
 
 }
 
-.form-container a {product-common
+.form-container a {
 	color: #646B63;
 }
 
@@ -263,7 +263,7 @@ input[type="checkbox"] {
 
 .airplane {
 	min-height: 250px;
-	background: #FFFFFF url('air_plane.png') no-repeat center;
+	background: #FFFFFF url('./images/air_plane.png') no-repeat center;
 	color: #000000;
 	font-size: 14px;
  	font-weight: bold;
@@ -309,7 +309,7 @@ input[type="checkbox"] {
 		 margin: 40px 0px 15px 0px;
 	}
 
-	.form-group {
+	.form-group {air
         margin-bottom: 10px;
     }
 
@@ -426,7 +426,7 @@ input[type="checkbox"] {
 
 /* ------------ @media ----------  */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {air
 	.gallery-content {
 	margin: 0px 200px 0px 200px;
     }
@@ -458,7 +458,7 @@ input[type="checkbox"] {
     .navbar-teashop {
 	    padding: 0px 50px 0px 50px;
     }
-    .navbar-left h1 {.product-counter  .counter
+    .navbar-left h1 {
         font-size: 11px;
         text-align: left;
     }
