@@ -51,7 +51,7 @@ h4 {
 
 a, a:active, a:visited {
 	text-decoration: none;
-}7
+}
 
 .form-container a, .form-container a:active, .form-container a:visited {
 	color: #646B63;
@@ -100,8 +100,7 @@ a, a:active, a:visited {
 	
 }
 
-.form-container {
-	
+.form-container {	
 	width: 100%;	
 	height:;
 	background: #FFFFFF;
@@ -163,7 +162,6 @@ a, a:active, a:visited {
 	padding: 5px;
 	border: 1px solid #00796b;
 	border-radius: 3px;
-
 }
 
 .enter-login:hover {
@@ -199,15 +197,13 @@ a, a:active, a:visited {
 
 .form-help2 {
 	padding-left: 30%;
-	padding-right: 30%;
-	
+	padding-right: 30%;	
 }
 
 .checkbox {
 	padding: 0px;
 	display: inline;
 	margin: 0px;
-
 }
 
 .remaindpass {
@@ -216,7 +212,6 @@ a, a:active, a:visited {
 	float: right;
 	display: inline;
 	margin: 0px;
-
 }
 
 .form-container a {
@@ -309,7 +304,7 @@ input[type="checkbox"] {
 		 margin: 40px 0px 15px 0px;
 	}
 
-	.form-group {air
+	.form-group {
         margin-bottom: 10px;
     }
 
@@ -426,7 +421,7 @@ input[type="checkbox"] {
 
 /* ------------ @media ----------  */
 
-@media only screen and (max-width: 767px) {air
+@media only screen and (max-width: 767px) {
 	.gallery-content {
 	margin: 0px 200px 0px 200px;
     }

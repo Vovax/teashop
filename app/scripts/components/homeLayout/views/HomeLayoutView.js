@@ -7,7 +7,7 @@ var HomeLayoutView = Mn.LayoutView.extend({
 
     template: template,
 
-    className: 'container-fluid container-teashop',
+    /* className: 'container-fluid container-teashop', */
 
     regions: {
         mainRegion: '#main_region',
