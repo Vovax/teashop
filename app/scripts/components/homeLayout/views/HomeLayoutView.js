@@ -20,8 +20,11 @@ var HomeLayoutView = Mn.LayoutView.extend({
 
     },
 
-    showAuthView: function(view) {
+    showView: function(view) {
         this.mainRegion.show(view);
+    },
+    showSignInView: function(view) {
+        this.mainRegion.show(view)
     }
 });
 

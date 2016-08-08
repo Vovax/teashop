@@ -2,8 +2,8 @@
 
 var App = require('../../app'),
     AppLayoutView = require('../AppLayoutView'),
-    AuthView = require('./views/signInView'),
-    HomeLayoutView = require('./views/HomeLayoutView');
+    SignInView = require('./views/signInView'),
+    HomeLayoutView = require('../homeLayout/views/HomeLayoutView');
 
 module.exports = {
 
@@ -19,4 +19,10 @@ module.exports = {
     	this.homeLayoutView.showSignInView(signInView);
 
     },
+    
+        navigateToAuth: function() {
+        this.homeLayoutView.$el.on('auth', _.bind(function() {
+            App.trigger('viewChange', 'auth');
+        }, this));
+    }
 };
