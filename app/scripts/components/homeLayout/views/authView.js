@@ -16,12 +16,12 @@ var AuthView = Mn.ItemView.extend({
 
 	ui: {
 		signin: '.enter-login',
-		signup: '.signup'
+		signup: '.enter-signup'
 	},
 
 	events: {
 		'click @ui.signin': 'signinUser',
-		'click @ui.signup': 'signup'
+		'click @ui.signup': 'signupUser'
 	},
 
 	initialize: function() {
@@ -46,7 +46,12 @@ var AuthView = Mn.ItemView.extend({
 
     signinUser: function(e) {
 		e.preventDefault();
-		this.trigger('showSigninView');
+		this.trigger('showSignInView');
+	},
+
+	signupUser:function(e) {
+		e.preventDefault();
+		this.trigger('showSignUpView');
 	}
 
     

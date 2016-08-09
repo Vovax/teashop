@@ -172,6 +172,7 @@ a, a:active, a:visited {
 	padding: 5px;
 	border: 1px solid #00796b;
 	border-radius: 3px;
+	cursor: pointer;
 
 }
 
@@ -191,6 +192,7 @@ a, a:active, a:visited {
 	padding: 5px;
 	border: 1px solid #00796b;
 	border-radius: 3px;
+	cursor: pointer;
 }
 
 .enter-signup:hover {

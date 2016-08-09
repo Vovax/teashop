@@ -3,6 +3,7 @@
 var App = require('../../app'),
     AppLayoutView = require('../AppLayoutView'),
     SignInView = require('./views/signInView'),
+    SignUpView = require('./views/signUpView')
     HomeLayoutView = require('../homeLayout/views/HomeLayoutView');
 
 module.exports = {
@@ -16,13 +17,15 @@ module.exports = {
 
     showMainContent: function() {
     	var signInView = new SignInView();
+        var signUpView = new SignUpView();
     	this.homeLayoutView.showSignInView(signInView);
+        this.homeLayoutView.showSignUpView(signUpView);
 
-    },
+    // },
     
-        navigateToAuth: function() {
-        this.homeLayoutView.$el.on('auth', _.bind(function() {
-            App.trigger('viewChange', 'auth');
-        }, this));
+    //     navigateToAuth: function() {
+    //     this.homeLayoutView.$el.on('auth', _.bind(function() {
+    //         App.trigger('viewChange', 'auth');
+    //     }, this));
     }
 };

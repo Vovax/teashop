@@ -1,6 +1,7 @@
 "use strict";
 
 var template = require("ejs!../templates/signIn.ejs");
+	// SignUpView = require('./SignUpView');
 
 var SignInView = Mn.ItemView.extend({
 
@@ -19,16 +20,14 @@ var SignInView = Mn.ItemView.extend({
 
 	events: {
 		'click @ui.recoveryPassword': 'recoveryPassword',
-		'click @ui.signin': 'submitLogin',
+		'click @ui.signiup': 'submitSignUp',
 		'click @ui.registration': 'openRegistrationForm'
 	},
 
 	initialize: function() {
-		// this.render();
 	},
 
 	onShow: function() {
-		// this.listenTo(view, '', this.);
 	},
 
 	callSomeMethod: function() {
@@ -40,11 +39,6 @@ var SignInView = Mn.ItemView.extend({
 		this.validateForm(target);
 
     }
-
-    // signin: function() {
-    //     this.trigger('auth');
-    // }
-
 });
 
 module.exports = SignInView;

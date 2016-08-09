@@ -24,8 +24,14 @@ var HomeLayoutView = Mn.LayoutView.extend({
         this.mainRegion.show(view);
     },
     showSignInView: function(view) {
-        this.mainRegion.show(view)
+        this.mainRegion.show(view);
+    },
+
+    showSignUpView: function(view) {
+        this.mainRegion.show(view);
     }
+
+
 });
 
 module.exports = HomeLayoutView;

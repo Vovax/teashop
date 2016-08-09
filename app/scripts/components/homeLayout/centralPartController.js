@@ -5,7 +5,8 @@ var App = require('../../app'),
     AuthView = require('./views/authView'),
     HomeLayoutView = require('./views/HomeLayoutView'),
     // Vent = require('../../Vent');
-    SignInView = require('../authorizeLayout/views/SignInView');
+    SignInView = require('../authorizeLayout/views/SignInView'),
+    SignUpView = require('../authorizeLayout/views/SignUpView');
 
 module.exports = {
 
@@ -19,20 +20,22 @@ module.exports = {
     showAuthContent: function() {
     	var authView = new AuthView();
     	this.homeLayoutView.showView(authView);
-        authView.listenTo(authView, 'showSigninView', _.bind(this.showSigninView, this));
+        authView.listenTo(authView, 'showSignInView', _.bind(this.showSignInView, this));
+        authView.listenTo(authView, 'showSignUpView', _.bind(this.showSignUpView, this));
 
     },
 
-    showSigninView: function() {
+    showSignInView: function() {
         this.SignInView = new SignInView();
         this.homeLayoutView.showView(this.SignInView);
         // App.regions.getRegion('centralRegion').show(this.SignInView);
+    },
+
+    showSignUpView: function() {
+        this.SignUpView = new SignUpView();
+        this.homeLayoutView.showView(this.SignUpView);
+        // App.regions.getRegion('centralRegion').show(this.SignUpView);
     }
-
-
-
-
-
 
     // authenticate: function(auth) {
     //     var view;
