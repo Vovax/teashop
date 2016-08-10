@@ -2,8 +2,9 @@
 
 var App = require('../../app'),
     AppLayoutView = require('../AppLayoutView'),
-    SignInView = require('./views/signInView'),
-    SignUpView = require('./views/signUpView')
+    SignInView = require('./views/SignInView'),
+    SignUpView = require('./views/SignUpView'),
+    ForgotPassView =require('./views/ForgotPassView'),
     HomeLayoutView = require('../homeLayout/views/HomeLayoutView');
 
 module.exports = {
@@ -16,11 +17,12 @@ module.exports = {
     },
 
     showMainContent: function() {
-    	var signInView = new SignInView();
-        var signUpView = new SignUpView();
-    	this.homeLayoutView.showSignInView(signInView);
-        this.homeLayoutView.showSignUpView(signUpView);
-
+    	var SignInView = new SignInView();
+        var SignUpView = new SignUpView();
+        // var ForgotPassView = new ForgotPassView();
+    	this.homeLayoutView.showSignInView(SignInView);
+        this.homeLayoutView.showSignUpView(SignUpView);
+        // this.homeLayoutView.showForgotPassView(ForgotPassView);
     // },
     
     //     navigateToAuth: function() {

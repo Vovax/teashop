@@ -6,7 +6,7 @@ var template = require("ejs!../templates/auth.ejs");
 
 var AuthView = Mn.ItemView.extend({
 
-	className: 'container-fluid',
+	className: 'container-fluid container-teashop',
 
 	template: template,
 

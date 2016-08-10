@@ -11,11 +11,13 @@ var SignUpView = Mn.ItemView.extend({
 	ui: {
 		useremail: '.form-control[name="email"]',
         userpass: '.form-control[name="password"]',
-        signup: '.submit_button'
+        login: '.logination',
+        signup: '.signup_button'
 	},
 
 	events: {
-		'click @ui.signup': 'submitSignup'
+		'click @ui.login': 'openLoginationForm',
+		'click @ui.signup': 'submitSignUp'
 	},
 
 	initialize: function() {
@@ -25,6 +27,11 @@ var SignUpView = Mn.ItemView.extend({
 	},
 
 	callSomeMethod: function() {
+	},
+
+	openLoginationForm: function(e) {
+    	e.preventDefault();
+		this.trigger('showSignInView');
 	},
 
 	validateInput: function(e) {

@@ -14,13 +14,13 @@ var SignInView = Mn.ItemView.extend({
         userpass: '.form-control[name="password"]',
         rememberUser: '.remember-me[name="rememberme"]',
         recoveryPassword: '.remaindpass',
-        signin: '.submit_button',
+        signin: '.signin_button',
         registration: '.registration'
 	},
 
 	events: {
 		'click @ui.recoveryPassword': 'recoveryPassword',
-		'click @ui.signiup': 'submitSignUp',
+		'click @ui.signin': 'submitSignIn',
 		'click @ui.registration': 'openRegistrationForm'
 	},
 
@@ -31,6 +31,16 @@ var SignInView = Mn.ItemView.extend({
 	},
 
 	callSomeMethod: function() {
+	},
+
+	recoveryPassword: function(e) {
+		e.preventDefault();
+		this.trigger('showForgotPassView');
+	},
+
+	openRegistrationForm: function(e) {
+    	e.preventDefault();
+		this.trigger('showSignUpView');
 	},
 
 	validateInput: function(e) {
