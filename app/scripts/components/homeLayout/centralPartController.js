@@ -6,7 +6,8 @@ var App = require('../../app'),
     HomeLayoutView = require('./views/HomeLayoutView'),
     // Vent = require('../../Vent');
     SignInView = require('../authorizeLayout/views/SignInView'),
-    SignUpView = require('../authorizeLayout/views/SignUpView');
+    SignUpView = require('../authorizeLayout/views/SignUpView'),
+    ForgotPassView = require('../authorizeLayout/views/ForgotPassView');
 
 module.exports = {
 
@@ -29,35 +30,18 @@ module.exports = {
         this.SignInView = new SignInView();
         this.homeLayoutView.showView(this.SignInView);
         // App.regions.getRegion('centralRegion').show(this.SignInView);
+        this.SignInView.listenTo(this.SignInView, 'showSignUpView', _.bind(this.showSignUpView, this));
+        this.SignInView.listenTo(this.SignInView, 'showForgotPassView', _.bind(this.showForgotPassView, this));
     },
 
     showSignUpView: function() {
         this.SignUpView = new SignUpView();
         this.homeLayoutView.showView(this.SignUpView);
-        // App.regions.getRegion('centralRegion').show(this.SignUpView);
+        this.SignUpView.listenTo(this.SignUpView, 'showSignInView', _.bind(this.showSignInView, this));
+    },
+    showForgotPassView: function() {
+        this.ForgotPassView = new ForgotPassView();
+        this.homeLayoutView.showView(this.ForgotPassView);
+        // this.ForgotPassView.listenTo(this.ForgotPassView, 'showSignInView', _.bind(this.showSignInView, this));
     }
-
-    // authenticate: function(auth) {
-    //     var view;
-    //     switch (auth) {
-    //         case 'signin':
-    //             view = new SignInView();
-    //             this.homeLayoutView.listenTo(view, 'signin', _.bind(this.authenticate, this));
-    //             break;
-    //         case 'signup':
-    //             view = new SignUpView();
-    //         default:
-    //     };
-    //     this.mainRegion = view;
-    //     this.homeLayoutView.openMainRegionView(view);
-    //     this.homeLayoutView.listenTo(view, 'submitSignin', _.bind(this.submitSignin, this));
-    // }
-
-    // navigateToAuth: function() {
-    //     this.homeLayoutView.$el.on('auth', _.bind(function() {
-    //         App.trigger('viewChange', 'auth');
-    //     }, this));
-    // }
-
-
 };

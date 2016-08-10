@@ -1,7 +1,6 @@
 "use strict";
 
 var template = require("ejs!../templates/signIn.ejs");
-	// SignUpView = require('./SignUpView');
 
 var SignInView = Mn.ItemView.extend({
 
@@ -10,17 +9,18 @@ var SignInView = Mn.ItemView.extend({
 	template: template,
 
 	ui: {
-		useremail: '.form-control[name="email"]',
-        userpass: '.form-control[name="password"]',
+		input: '.form-group',
+		email: '.form-group[name="email"]',
+        pass: '.form-group[name="password"]',
         rememberUser: '.remember-me[name="rememberme"]',
         recoveryPassword: '.remaindpass',
-        signin: '.submit_button',
+        signin: '.signin_button',
         registration: '.registration'
 	},
 
 	events: {
 		'click @ui.recoveryPassword': 'recoveryPassword',
-		'click @ui.signiup': 'submitSignUp',
+		'click @ui.signin': 'submitSignIn',
 		'click @ui.registration': 'openRegistrationForm'
 	},
 
@@ -32,6 +32,16 @@ var SignInView = Mn.ItemView.extend({
 
 	callSomeMethod: function() {
 	},
+
+	recoveryPassword: function(e) {
+		e.preventDefault();
+		this.trigger('showForgotPassView');
+	},
+
+    openRegistrationForm: function(e) {
+    	e.preventDefault();
+		this.trigger('showSignUpView');
+    },
 
 	validateInput: function(e) {
 		var target = [];

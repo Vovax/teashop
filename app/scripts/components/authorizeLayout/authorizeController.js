@@ -2,8 +2,9 @@
 
 var App = require('../../app'),
     AppLayoutView = require('../AppLayoutView'),
-    SignInView = require('./views/signInView'),
-    SignUpView = require('./views/signUpView')
+    SignInView = require('./views/SignInView'),
+    SignUpView = require('./views/SignUpView'),
+    ForgotPassView =require('./views/ForgotPassView'),
     HomeLayoutView = require('../homeLayout/views/HomeLayoutView');
 
 module.exports = {
@@ -20,6 +21,7 @@ module.exports = {
         var signUpView = new SignUpView();
     	this.homeLayoutView.showSignInView(signInView);
         this.homeLayoutView.showSignUpView(signUpView);
+
 
     // },
     

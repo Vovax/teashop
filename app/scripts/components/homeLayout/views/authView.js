@@ -35,15 +35,6 @@ var AuthView = Mn.ItemView.extend({
 	serializeData: function() {
 	},
 
-	// signinUser: function() {
-	// 	console.log('signin');
-	// },
-
-    // openLogInView: function(view) {
-    // 	e.preventDefault();
-    //     this.centralRegion.show(view);
-    // },
-
     signinUser: function(e) {
 		e.preventDefault();
 		this.trigger('showSignInView');
@@ -53,8 +44,7 @@ var AuthView = Mn.ItemView.extend({
 		e.preventDefault();
 		this.trigger('showSignUpView');
 	}
-
-    
+ 
 });
 
 module.exports = AuthView;
