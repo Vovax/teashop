@@ -29,7 +29,11 @@ var ForgotPassView = Mn.ItemView.extend({
 
     submitRecoveryPassword: function(e) {
     	e.preventDefault();
+<<<<<<< HEAD
 		this.trigger('showSentPassView');
+=======
+		this.trigger('showForgotPassView');
+>>>>>>> feat-auth
     },
 
 	validateInput: function(e) {

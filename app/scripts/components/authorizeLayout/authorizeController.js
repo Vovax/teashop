@@ -17,12 +17,21 @@ module.exports = {
     },
 
     showMainContent: function() {
+<<<<<<< HEAD
     	var SignInView = new SignInView();
         var SignUpView = new SignUpView();
         // var ForgotPassView = new ForgotPassView();
     	this.homeLayoutView.showSignInView(SignInView);
         this.homeLayoutView.showSignUpView(SignUpView);
         // this.homeLayoutView.showForgotPassView(ForgotPassView);
+=======
+    	var signInView = new SignInView();
+        var signUpView = new SignUpView();
+    	this.homeLayoutView.showSignInView(signInView);
+        this.homeLayoutView.showSignUpView(signUpView);
+
+
+>>>>>>> feat-auth
     // },
     
     //     navigateToAuth: function() {

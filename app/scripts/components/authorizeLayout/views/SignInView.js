@@ -1,7 +1,6 @@
 "use strict";
 
 var template = require("ejs!../templates/signIn.ejs");
-	// SignUpView = require('./SignUpView');
 
 var SignInView = Mn.ItemView.extend({
 
@@ -10,8 +9,9 @@ var SignInView = Mn.ItemView.extend({
 	template: template,
 
 	ui: {
-		useremail: '.form-control[name="email"]',
-        userpass: '.form-control[name="password"]',
+		input: '.form-group',
+		email: '.form-group[name="email"]',
+        pass: '.form-group[name="password"]',
         rememberUser: '.remember-me[name="rememberme"]',
         recoveryPassword: '.remaindpass',
         signin: '.signin_button',
@@ -38,10 +38,17 @@ var SignInView = Mn.ItemView.extend({
 		this.trigger('showForgotPassView');
 	},
 
+<<<<<<< HEAD
 	openRegistrationForm: function(e) {
     	e.preventDefault();
 		this.trigger('showSignUpView');
 	},
+=======
+    openRegistrationForm: function(e) {
+    	e.preventDefault();
+		this.trigger('showSignUpView');
+    },
+>>>>>>> feat-auth
 
 	validateInput: function(e) {
 		var target = [];
