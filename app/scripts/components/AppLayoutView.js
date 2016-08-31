@@ -9,7 +9,10 @@ var AppLayoutView = Mn.LayoutView.extend({
     el: '#app-container',
 
     regions: {
-        centralRegion: '#central-region'
+    	topRegion: '#top-region',
+        centralRegion: '#central-region',
+        galleryRegion: '#gallery-region',
+        bottomRegion: '#bottom-region'
     },
 
     initialize: function() {

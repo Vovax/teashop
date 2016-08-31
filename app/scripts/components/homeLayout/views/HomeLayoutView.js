@@ -10,6 +10,7 @@ var HomeLayoutView = Mn.LayoutView.extend({
     className: 'container-fluid container-teashop',
 
     regions: {
+        headerRegion: '#header_region',
         mainRegion: '#main_region',
         popupRegion: '#popup_region'
     },
@@ -23,11 +24,11 @@ var HomeLayoutView = Mn.LayoutView.extend({
     showView: function(view) {
         this.mainRegion.show(view);
     },
-    showSignInView: function(view) {
+    showSignIn: function(view) {
         this.mainRegion.show(view);
     },
 
-    showSignUpView: function(view) {
+    showSignUp: function(view) {
         this.mainRegion.show(view);
     }
 

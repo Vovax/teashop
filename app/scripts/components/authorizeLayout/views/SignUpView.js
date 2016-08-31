@@ -4,38 +4,29 @@ var template = require("ejs!../templates/signUp.ejs");
 
 var SignUpView = Mn.ItemView.extend({
 
-	className: 'signup-container',
+	className: 'container-teashop signup-container',
 
 	template: template,
 
 	ui: {
-<<<<<<< HEAD
-		useremail: '.form-control[name="email"]',
-        userpass: '.form-control[name="password"]',
-        login: '.logination',
-        signup: '.signup_button'
-	},
-
-	events: {
-		'click @ui.login': 'openLoginationForm',
-		'click @ui.signup': 'submitSignUp'
-=======
-		name: '.form-group[name=name]',
-		zipcode: '.form-group[name=surname]',
-		city: '.form-group[name=surname]',
-		email: '.form-group[name="email"]',
-        pass: '.form-group[name="password"]',
+		name: '.form-control[name=name]',
+		zip_code: '.form-control[name=zipcode]',
+		city: '.form-control[name=city]',
+		address: '.form-control[name=address]',
+		email: '.form-control[name="email"]',
+        pass: '.form-control[name="password"]',
         signup: '.signup_button',
         login: '.logination'
 	},
 
 	events: {
-		'click @ui.signup': 'submitSignup',
+		'focusout @ui.input': 'validateInput',
+		'click @ui.signup': 'submitSignUp',
 		'click @ui.login': 'openLogInForm'
->>>>>>> feat-auth
 	},
 
 	initialize: function() {
+		console.log(this.model);
 	},
 
 	onShow: function() {
@@ -44,23 +35,35 @@ var SignUpView = Mn.ItemView.extend({
 	callSomeMethod: function() {
 	},
 
-<<<<<<< HEAD
-	openLoginationForm: function(e) {
-    	e.preventDefault();
-		this.trigger('showSignInView');
-	},
-=======
     openLogInForm: function(e) {
     	e.preventDefault();
 		this.trigger('showSignInView');
     },
->>>>>>> feat-auth
 
 	validateInput: function(e) {
 		var target = [];
 		target.push(e.target);
 		this.validateForm(target);
+    },
+
+    submitForm: function() {
+        this.trigger('submitSignUp');
+    },
+
+    submitSignUp: function() {
+        this.model.set({
+        	name: this.ui.name.val(),
+        	zip_code: this.ui.zip_code.val(),
+        	city: this.ui.city.val(),
+        	address: this.ui.address.val(),
+        	email: this.ui.email.val(),
+        	password: this.ui.pass.val()
+        });
+        console.log(this.model.toJSON());
+        debugger;
+        this.trigger('signup', this.model);
     }
+
 });
 
 module.exports = SignUpView;

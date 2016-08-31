@@ -4,17 +4,18 @@ var template = require("ejs!../templates/forgotPass.ejs");
 
 var ForgotPassView = Mn.ItemView.extend({
 
-	className: 'recovery-container',
+	className: 'container-teashop recovery-container',
 
 	template: template,
 
 	ui: {
-		input: '.form-group',
-		email: '.form-group[name="email"]',
+		input: '.form-control',
+		email: '.form-control[name="email"]',
         signin: '.recovery_button'
 	},
 
 	events: {
+		'focusout @ui.input': 'validateInput',
 		'click @ui.signin': 'submitRecoveryPassword'
 	},
 
@@ -28,19 +29,20 @@ var ForgotPassView = Mn.ItemView.extend({
 	},
 
     submitRecoveryPassword: function(e) {
+    	debugger;
     	e.preventDefault();
-<<<<<<< HEAD
-		this.trigger('showSentPassView');
-=======
-		this.trigger('showForgotPassView');
->>>>>>> feat-auth
-    },
+		e.stopPropagation();
+    	var email = this.ui.email.val();
 
-	validateInput: function(e) {
-		var target = [];
-		target.push(e.target);
-		this.validateForm(target);
-
+    	$.ajax({
+			type: 'POST',
+			url: 'http://localhost:3000/auth/password',
+			data: {
+				user: {
+					email: email
+				}
+			},
+		});
     }
 });
 
