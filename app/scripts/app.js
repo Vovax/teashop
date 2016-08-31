@@ -15,7 +15,9 @@ App.on('before:start', function() {
 
 App.on('start', function() {
 	App.router = new Router();
-    Backbone.history.start({pushState: true});
+    Backbone.history.start({
+    	// pushState: true
+    });
 
 
 //     Backbone.sync = function(method, model, options) {

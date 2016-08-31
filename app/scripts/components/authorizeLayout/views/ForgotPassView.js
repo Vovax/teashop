@@ -19,7 +19,7 @@ var ForgotPassView = Mn.ItemView.extend({
 		'click @ui.signin': 'submitRecoveryPassword'
 	},
 
-	initialize: function() {
+	initialize: function(options) {
 	},
 
 	onShow: function() {
@@ -38,10 +38,18 @@ var ForgotPassView = Mn.ItemView.extend({
 			type: 'POST',
 			url: 'http://localhost:3000/auth/password',
 			data: {
-				user: {
-					email: email
-				}
+				email: email
 			},
+			success: function(e) {
+				debugger;
+				console.log(e.message);
+
+			},
+			error: function(e) {
+				debugger;
+				console.log(e.message);
+				console.log(e.responseJSON.errors[0]);
+			}
 		});
     }
 });

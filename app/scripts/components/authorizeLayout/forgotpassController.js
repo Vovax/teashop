@@ -14,24 +14,15 @@ module.exports = {
             model: user
         });
         App.regions.getRegion('centralRegion').show(this.forgotPassView);
+        this.forgotPassView.listenTo(this.forgotPassView, 'showTextMessage', _.bind(this.showTextMessage, this));
         // this.forgotPassView.listenTo(this.forgotPassView, 'showSentPassView', _.bind(this.sentPassView, this));
         // this.forgotPassView.listenTo(this.forgotPassView, 'recoveryPass', _.bind(this.submitRecoveryPass, this));
+        // serializeData: func() { return { text: this.options.text }};
     },
 
-    submitRecoveryPass: function() {
+    showTextMessage: function(text) {
         debugger;
-
-        model.urlRoot = 'http://localhost:3000/auth/password';
-        model.save()
         
-            .done(function(response, status, xhr) {
-                debugger;
-                // App.router.navigate('sign_in', true);
-            })
-            .fail(function(xhr, status) {
-                debugger;
-            });
-
     }
 
 };
